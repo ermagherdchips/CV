@@ -4,6 +4,7 @@
 \usepackage{moresize} %Huge and HUGE
 \usepackage[margin=0.65in]{geometry}%Margins
 \usepackage[none]{hyphenat}%Remove hyphenation
+\usepackage{enumitem}
 
 %\cellwidth in tabularx size
 \makeatletter
@@ -16,7 +17,16 @@
 %No page numbering
 \pagenumbering{gobble}
 
-\newcommand{\addIndent}[1]{{\hspace{5pt}- \noindent\begin{tabularx}{\cellwidth}{X}#1\end{tabularx}}}
+\newcommand{\smitem}[1]{\item {\small {#1}}}
+
+\newenvironment{bullets}{\begin{minipage}[t]{\linewidth}\begin{itemize}[leftmargin=2em,label=-,nosep]}{\end{itemize}\end{minipage}\vspace{5pt}}
+
+\newenvironment{sectionitem}{
+	\vspace{6pt} {\noindent \begin{tabularx}{\cellwidth}{p{75pt}X} }
+}
+{
+\end{tabularx}
+}
 
 \begin{document}
 	\noindent
@@ -24,41 +34,72 @@
 		\begin{tabular}{l}
 			{\HUGE\textbf{Amie Key}} \\
 		\end{tabular} & 
-	
+		
 		\begin{tabular}{r}
 			6 Meadow Grange, DH4 6DW\\
 			amiekey10@gmail.com\\
 			07736105946\\
 		\end{tabular} & 
-	
+		
 		\begin{tabular}{r}
-		\textbf{Addr.} \\
-		\textbf{Email} \\
-		\textbf{Phone} \\
+			\textbf{Addr.} \\
+			\textbf{Email} \\
+			\textbf{Phone} \\
 		\end{tabular}
 	\end{tabularx}
-
+	
 	\par\noindent\rule{\textwidth}{0.4pt}
-
+	
 	\noindent
 	\begin{tabularx}{\textwidth}{p{150pt}|X}
 		\vspace{1pt}
-		Opening statement about me being 10/10 hard-working and motivated. I am currently in my final year of my undergraduate studies at Durham University, studying Education Studies (English Studies). For my dissertation, I am researching an area of great interest to myself and which I want to research in greater depth at PhD level: the experiences of estranged students in UK higher education. In particular, I am interested in the ways that estranged students construct their narratives of estrangement, and how these narratives impact their experiences. My own position as an estranged student has greatly influenced this motivation to help other students in my situation to benefit from a higher education in the same way as students with family support, but has also provided me with the unique opportunity of working with charities such as Stand Alone to promote awareness of and support for estranged students in HE. Throughout my degree, I have been heavily involved in a range of extra-curricular activities and part-time work, providing me with the time-management skills necessary to undertake PhD study.
+		Opening statement about me being 10/10 hard-working and motivated. I am currently in my final year of my undergraduate studies at Durham University, studying Education Studies (English Studies). For my dissertation, I am researching an area of great interest to myself and which I want to research in greater depth at PhD level: the experiences of estranged students in UK higher education. In particular, I am interested in the ways that estranged students construct their narratives of estrangement, and how these narratives impact their experiences. My own position as an estranged student has greatly influenced this motivation to help other students in my situation to benefit from a higher education in the same way as students with family support, but has also provided me with the unique opportunity of working with charities such as Stand Alone to promote awareness of and support for estranged students in HE. Throughout my degree, I have been heavily involved in a range of extra-curricular activities and part-time work, providing me with the time-management skills necessary to undertake PhD study.&
 		
-		\vfill
-		&
 		\vspace{1pt}
 		{\Large\textbf{Education}}
-		\vspace{6pt}
 		
-		{\noindent\begin{tabularx}{\cellwidth}{p{75pt}X}
+		\begin{sectionitem}
 			2015 --- 2018&\textbf{Durham University} (St. Aidan's College)\\
 			&BA Education Studies (English Studies)\\
-			&\addIndent{Year 2: 70\%, 75\% in Education}\\
-			&\addIndent{Year 1: 68\%, 71\% in Education}\\
-			&\textbf{Dissertation}: Exploring the experiences of estranged students in UK higher education\\
-			&Supervised by Dr. Rille Raaper\\
-			&\addIndent{Qualitative interviews with estranged students in UK universities, exploring issues that they face at university due to their estrangement, What support their university offers to them, and how they think support can be improved}\\
-		\end{tabularx}}
+			&\begin{bullets}
+				\smitem{Year 2: 70\%, 75\% in Education}
+				\smitem{Year 1: 68\%, 71\% in Education}
+			\end{bullets}\\
+			&\textbf{Including Modules}:\\
+			&\begin{bullets}
+				\smitem{Higher Education: Issues of Exclusion and Inclusion - 74\%}
+				\smitem{Constructing Childhood and Youth - 86\%}
+				\smitem{Educational Research Methods - 68\%}
+			\end{bullets}\\
+			&\textbf{Dissertation}: Exploring the experiences of estranged students in UK higher education. (Supervised by Dr. Rille Raaper)\\
+			&Interviews with estranged students at UK universities exploring:\\
+			&\begin{bullets}
+				\smitem{Issues that they face at university}
+				\smitem{What support their university offers them}
+				\smitem{How they think support can be improved}
+			\end{bullets}\\
+		\end{sectionItem}
+		
+		\begin{sectionitem}
+			2015 --- 2018&\textbf{Durham University} (St. Aidan's College)\\
+			&BA Education Studies (English Studies)\\
+			&\begin{bullets}
+				\smitem{Year 2: 70\%, 75\% in Education}
+				\smitem{Year 1: 68\%, 71\% in Education}
+			\end{bullets}\\
+			&\textbf{Including Modules}:\\
+			&\begin{bullets}
+				\smitem{Higher Education: Issues of Exclusion and Inclusion - 74\%}
+				\smitem{Constructing Childhood and Youth - 86\%}
+				\smitem{Educational Research Methods - 68\%}
+			\end{bullets}\\
+			&\textbf{Dissertation}: Exploring the experiences of estranged students in UK higher education. (Supervised by Dr. Rille Raaper)\\
+			&Interviews with estranged students at UK universities exploring:\\
+			&\begin{bullets}
+				\smitem{Issues that they face at university}
+				\smitem{What support their university offers them}
+				\smitem{How they think support can be improved}
+			\end{bullets}\\
+		\end{sectionitem}
 	\end{tabularx}
 \end{document}
