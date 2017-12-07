@@ -1,4 +1,4 @@
-\documentclass[12pt, a4paper]{article}
+\documentclass[hidelinks, 12pt, a4paper]{article}
 
 \usepackage{tabularx} %full-width tables
 \usepackage{moresize} %Huge and HUGE
@@ -6,7 +6,8 @@
 \usepackage[none]{hyphenat}%Remove hyphenation
 \usepackage{enumitem}%to set gaps in itemize
 \usepackage{fontawesome}
-\usepackage{hyperref}
+\usepackage[hidelinks]{hyperref}
+\usepackage{blindtext}
 
 \usepackage{multicol}
 
@@ -64,78 +65,89 @@
 	\par\noindent\rule{\textwidth}{0.2pt}
 
 	\noindent
-	\begin{tabularx}{\textwidth}{p{150pt}|X}
-		\vspace{6pt}
-		Opening statement about me being 10/10 hard-working and motivated. I am currently in my final year of my undergraduate studies at Durham University, studying Education Studies (English Studies). For my dissertation, I am researching an area of great interest to myself and which I want to research in greater depth at PhD level: the experiences of estranged students in UK higher education. In particular, I am interested in the ways that estranged students construct their narratives of estrangement, and how these narratives impact their experiences. My own position as an estranged student has greatly influenced this motivation to help other students in my situation to benefit from a higher education in the same way as students with family support, but has also provided me with the unique opportunity of working with charities such as Stand Alone to promote awareness of and support for estranged students in HE. Throughout my degree, I have been heavily involved in a range of extra-curricular activities and part-time work, providing me with the time-management skills necessary to undertake PhD study.&
-		
-		\begin{minipage}[t]{\linewidth}
-			\sectionheader{Education}
+	\begin{table}[h!]
+		\begin{tabularx}{\textwidth}{p{150pt}p{1pt}X}
+			{\noindent\Large\textbf{Personal Profile}}
+			\vspace{3pt}
+			 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras imperdiet pellentesque scelerisque. Pellentesque vitae pulvinar ipsum. Donec imperdiet neque a lobortis euismod. Duis euismod felis vitae justo vestibulum consequat.\newline
+			 
+			 Vestibulum nec cursus arcu, convallis fermentum ligula. Etiam ut varius justo. Suspendisse potenti. Vivamus ac enim eu purus venenatis faucibus at eget tortor.\newline
+			 
+			 Donec dignissim purus vel commodo tristique. Maecenas efficitur gravida metus, id pellentesque erat facilisis finibus. Cras in vestibulum arcu. Sed vel risus enim. Curabitur auctor elit nec ullamcorper rhoncus. Curabitur ac purus nunc. Aenean dapibus elit eu diam tristique porta.\newline
+			 
+			 Etiam ultrices sollicitudin arcu non feugiat. Vivamus ut mattis arcu. Nulla at est quam. Duis eu ipsum vel metus pharetra bibendum. Aenean lectus urna. Nam tincidunt lacinia elementum. Etiam blandit lorem nec tellus suscipit auctor. Duis est lacus, ornare id accumsan eu, luctus nec massa. Quisque vulputate est vel dolor ultrices lobortis.
+			&&
 			
-			\begin{sectionitem}
-				2015 --- 2018&\textbf{\href{https://www.dur.ac.uk/}{Durham University}} (\href{https://www.dur.ac.uk/st-aidans.college/}{St. Aidan's College})\\
-				\emph{Durham}&\href{https://www.dur.ac.uk/education/undergraduate/ed_studies/}{BA Education Studies (English Studies)}\\
-				&\begin{bullets}
-					\smitem{Year 2: 70\%, 75\% in Education}
-					\smitem{Year 1: 68\%, 71\% in Education}
-				\end{bullets}\\
-				&\textbf{Including Modules}:\\
-				&\begin{bullets}
-					\smitem{\href{https://www.dur.ac.uk/faculty.handbook/module_description/?module_code=EDUC2351}{Higher Education: Issues of Exclusion and Inclusion} - 74\%}
-					\smitem{\href{https://www.dur.ac.uk/faculty.handbook/module_description/?year=2017&module_code=EDUC2401}{Constructing Childhood and Youth} - 86\%}
-					\smitem{\href{https://www.dur.ac.uk/faculty.handbook/module_description/?year=2017&module_code=EDUC2301}{Educational Research Methods} - 68\%}
-				\end{bullets}\\
-				&\textbf{Dissertation}: Exploring the experiences of estranged students in UK higher education. (Supervised by \href{https://www.dur.ac.uk/education/staff/profile/?id=14790}{Dr. Rille Raaper})\\
-				&Interviews with estranged students at UK universities exploring:\\
-				&\begin{bullets}
-					\smitem{Issues that they face at university}
-					\smitem{What support their university offers them}
-					\smitem{How they think support can be improved}
-				\end{bullets}\\
-			\end{sectionitem}
-			
-			\begin{sectionitem}
-				2013 --- 2015&\textbf{\href{https://en.wikipedia.org/wiki/Whitworth_Park_School}{Whitworth Park Sixth Form}}\\
-				\emph{Spennymoor,}&A-Level Grades:\\
-				\emph{Co. Durham}&\begin{bullets}
-					\smitem{English Literature - A*}
-					\smitem{History - A}
-					\smitem{Psychology - B}
-					\smitem{Extended Project (AS) - A*}
-				\end{bullets}\\
-			\end{sectionitem}
-			
-			\begin{sectionitem}
-				2008 --- 2013&\textbf{\href{https://en.wikipedia.org/wiki/Whitworth_Park_School}{Whitworth Park School}}\\
-				\emph{Spennymoor}&GCSE Grades:\\
-				\emph{Co. Durham}&\begin{minipage}[t]{\linewidth}\begin{multicols}{4}\begin{description}[nosep]
-						\item 1 $\times$ A*
-						\item 8 $\times$ A
-						\item 2 $\times$ B
-						\item 1 $\times$ C
-					\end{description}
-				\end{multicols}
+			\begin{minipage}[t]{\linewidth}
+				
+				{\noindent\hspace{3pt}\Large\textbf{Education}}
+				
+				\begin{sectionitem}
+					2015 --- 2018&\textbf{\href{https://www.dur.ac.uk/}{Durham University}} (\href{https://www.dur.ac.uk/st-aidans.college/}{St. Aidan's College})\\
+					\emph{Durham}&\href{https://www.dur.ac.uk/education/undergraduate/ed_studies/}{BA Education Studies (English Studies)}\\
+					&\begin{bullets}
+						\smitem{Year 2: 70\%, 75\% in Education}
+						\smitem{Year 1: 68\%, 71\% in Education}
+					\end{bullets}\\
+					&\textbf{Including Modules}:\\
+					&\begin{bullets}
+						\smitem{\href{https://www.dur.ac.uk/faculty.handbook/module_description/?module_code=EDUC2351}{Higher Education: Issues of Exclusion and Inclusion} - 74\%}
+						\smitem{\href{https://www.dur.ac.uk/faculty.handbook/module_description/?year=2017&module_code=EDUC2401}{Constructing Childhood and Youth} - 86\%}
+						\smitem{\href{https://www.dur.ac.uk/faculty.handbook/module_description/?year=2017&module_code=EDUC2301}{Educational Research Methods} - 68\%}
+					\end{bullets}\\
+					&\textbf{Dissertation}: Exploring the experiences of estranged students in UK higher education. (Supervised by \href{https://www.dur.ac.uk/education/staff/profile/?id=14790}{Dr. Rille Raaper})\\
+					&Interviews with estranged students at UK universities exploring:\\
+					&\begin{bullets}
+						\smitem{Issues that they face at university}
+						\smitem{What support their university offers them}
+						\smitem{How they think support can be improved}
+					\end{bullets}\\
+				\end{sectionitem}
+				
+				\begin{sectionitem}
+					2013 --- 2015&\textbf{\href{http://whitworthpark.org.uk/sixthForm.html}{Whitworth Park Sixth Form}}\\
+					\emph{Spennymoor,}&A-Level Grades:\\
+					\emph{Co. Durham}&\begin{bullets}
+						\smitem{English Literature - A*}
+						\smitem{History - A}
+						\smitem{Psychology - B}
+						\smitem{Extended Project (AS) - A*}
+					\end{bullets}\\
+				\end{sectionitem}
+				
+				\begin{sectionitem}
+					2008 --- 2013&\textbf{\href{http://whitworthpark.org.uk/}{Whitworth Park School}}\\
+					\emph{Spennymoor}&GCSE Grades:\\
+					\emph{Co. Durham}&\begin{minipage}[t]{\linewidth}\begin{multicols}{4}\begin{description}[nosep]
+							\item 1 $\times$ A*
+							\item 8 $\times$ A
+							\item 2 $\times$ B
+							\item 1 $\times$ C
+						\end{description}
+					\end{multicols}
+				\end{minipage}
+				\end{sectionitem}
+				
+				\sectionheader{Experience Regarding Estrangement}
+				
+				\begin{sectionitem}
+					July 2017&\textbf{\href{http://standalone.org.uk/}{Stand Alone} and \href{https://www.nus.org.uk/en/who-we-are/how-we-work/lesbian-gay-bisexual-and-trans/}{NUS LGBT+}}\\
+					\emph{Birmingham}&Involved with national \href{http://www.thestandalonepledge.org.uk/images/thestandalonepledge/filer/ESSC_Information_Booklet_Sept_17.pdf}{Estranged Students' Solidarity Campaign}\\
+					&\begin{bullets}
+						\smitem{Wrote a piece for the campaign's \href{http://www.thestandalonepledge.org.uk/images/thestandalonepledge/filer/ESSC_Information_Booklet_Sept_17.pdf}{information booklet}, distributed to Students Unions nationally}
+						\smitem{Attended the launch with Stand Alone at NUS Conference}
+						\smitem{Gave a presentation about my experiences as an estranged student at Durham}
+						\smitem{Guided Students' Union Officers on how to lobby universities to improve estranged students' experiences}
+					\end{bullets}
+				\end{sectionitem}
 			\end{minipage}
-			\end{sectionitem}
-			
-			\sectionheader{Experience Regarding Estrangement}
-			
-			\begin{sectionitem}
-				July 2017&\textbf{\href{http://standalone.org.uk/}{Stand Alone} and \href{https://www.nus.org.uk/en/who-we-are/how-we-work/lesbian-gay-bisexual-and-trans/}{NUS LGBT+}}\\
-				\emph{Birmingham}&Involved with national \href{http://www.thestandalonepledge.org.uk/images/thestandalonepledge/filer/ESSC_Information_Booklet_Sept_17.pdf}{Estranged Students' Solidarity Campaign}\\
-				&\begin{bullets}
-					\smitem{Wrote a piece for the campaign's \href{http://www.thestandalonepledge.org.uk/images/thestandalonepledge/filer/ESSC_Information_Booklet_Sept_17.pdf}{information booklet}, distributed to Students Unions nationally}
-					\smitem{Attended the launch with Stand Alone at NUS Conference}
-					\smitem{Gave a presentation about my experiences as an estranged student at Durham}
-					\smitem{Guided Students' Union Officers on how to lobby universities to improve estranged students' experiences}
-				\end{bullets}
-			\end{sectionitem}
-		\end{minipage}
-	\end{tabularx}
+		\end{tabularx}
+	\end{table}
 	
 	\begin{table}
 		\noindent
 		
-		\begin{tabularx}{\textwidth}{XcX}
+		\begin{tabularx}{\textwidth}{Xp{1pt}X}
 		
 			\begin{minipage}[t]{\linewidth}
 				%\sectionheader{Experience Regarding Estrangement (Cont.)}\\
