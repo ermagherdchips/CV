@@ -1,9 +1,11 @@
-\documentclass[12pt, a4paper, debug]{article}
+\documentclass[12pt, a4paper]{article}
 
 \usepackage{tabularx} %full-width tables
 \usepackage{moresize} %Huge and HUGE
 \usepackage[margin=0.65in]{geometry}%Margins
 \usepackage[none]{hyphenat}%Remove hyphenation
+\usepackage{enumitem}%to set gaps in itemize
+\usepackage{multicol}%to make 2nd page 2 columns
 
 %\cellwidth in tabularx size
 \makeatletter
@@ -13,10 +15,26 @@
 %Right-aligned tabularx
 \newcolumntype{R}{>{\raggedleft\arraybackslash}X}
 
+%Change gap between columns on 2nd page
+%\setlength{\columnsep}{1.5cm}
+%Add line between columns
+\setlength{\columnseprule}{0.2pt}
+
 %No page numbering
 \pagenumbering{gobble}
 
-\newcommand{\addIndent}[1]{{\hspace{5pt}- \noindent\begin{tabularx}{\cellwidth}{X}#1\end{tabularx}}}
+\newcommand{\smitem}[1]{\item {\small {#1}}}
+
+\newenvironment{bullets}{\begin{minipage}[t]{\linewidth}\begin{itemize}[leftmargin=2em,label=-,nosep]}{\end{itemize}\end{minipage}\vspace{5pt}}
+
+\newenvironment{sectionitem}{\vspace{6pt}\noindent\tabularx{\linewidth}{p{70pt}X}}{\endtabularx}
+
+\newcommand{\sectionheader}[1]{
+	\vspace{6pt}
+	{
+		\noindent
+		%\hspace{5pt}
+		\Large\textbf{#1}}}
 
 \begin{document}
 	\noindent
@@ -38,27 +56,172 @@
 		\end{tabular}
 	\end{tabularx}
 
-	\par\noindent\rule{\textwidth}{0.4pt}
+	\par\noindent\rule{\textwidth}{0.2pt}
 
 	\noindent
 	\begin{tabularx}{\textwidth}{p{150pt}|X}
-		\vspace{1pt}
-		Opening statement about me being 10/10 hard-working and motivated. I am currently in my final year of my undergraduate studies at Durham University, studying Education Studies (English Studies). For my dissertation, I am researching an area of great interest to myself and which I want to research in greater depth at PhD level: the experiences of estranged students in UK higher education. In particular, I am interested in the ways that estranged students construct their narratives of estrangement, and how these narratives impact their experiences. My own position as an estranged student has greatly influenced this motivation to help other students in my situation to benefit from a higher education in the same way as students with family support, but has also provided me with the unique opportunity of working with charities such as Stand Alone to promote awareness of and support for estranged students in HE. Throughout my degree, I have been heavily involved in a range of extra-curricular activities and part-time work, providing me with the time-management skills necessary to undertake PhD study.
-		
-		\vfill
-		&
-		\vspace{1pt}
-		{\Large\textbf{Education}}
 		\vspace{6pt}
+		Opening statement about me being 10/10 hard-working and motivated. I am currently in my final year of my undergraduate studies at Durham University, studying Education Studies (English Studies). For my dissertation, I am researching an area of great interest to myself and which I want to research in greater depth at PhD level: the experiences of estranged students in UK higher education. In particular, I am interested in the ways that estranged students construct their narratives of estrangement, and how these narratives impact their experiences. My own position as an estranged student has greatly influenced this motivation to help other students in my situation to benefit from a higher education in the same way as students with family support, but has also provided me with the unique opportunity of working with charities such as Stand Alone to promote awareness of and support for estranged students in HE. Throughout my degree, I have been heavily involved in a range of extra-curricular activities and part-time work, providing me with the time-management skills necessary to undertake PhD study.&
 		
-		{\noindent\begin{tabularx}{\cellwidth}{p{75pt}X}
-			2015 --- 2018&\textbf{Durham University} (St. Aidan's College)\\
-			&BA Education Studies (English Studies)\\
-			&\addIndent{Year 2: 70\%, 75\% in Education}\\
-			&\addIndent{Year 1: 68\%, 71\% in Education}\\
-			&\textbf{Dissertation}: Exploring the experiences of estranged students in UK higher education\\
-			&Supervised by Dr. Rille Raaper\\
-			&\addIndent{Qualitative interviews with estranged students in UK universities, exploring issues that they face at university due to their estrangement, What support their university offers to them, and how they think support can be improved}\\
-		\end{tabularx}}
+		\begin{minipage}[t]{\linewidth}
+			\sectionheader{Education}
+			
+			\begin{sectionitem}
+				2015 --- 2018&\textbf{Durham University} (St. Aidan's College)\\
+				\emph{Durham}&BA Education Studies (English Studies)\\
+				&\begin{bullets}
+					\smitem{Year 2: 70\%, 75\% in Education}
+					\smitem{Year 1: 68\%, 71\% in Education}
+				\end{bullets}\\
+				&\textbf{Including Modules}:\\
+				&\begin{bullets}
+					\smitem{Higher Education: Issues of Exclusion and Inclusion - 74\%}
+					\smitem{Constructing Childhood and Youth - 86\%}
+					\smitem{Educational Research Methods - 68\%}
+				\end{bullets}\\
+				&\textbf{Dissertation}: Exploring the experiences of estranged students in UK higher education. (Supervised by Dr. Rille Raaper)\\
+				&Interviews with estranged students at UK universities exploring:\\
+				&\begin{bullets}
+					\smitem{Issues that they face at university}
+					\smitem{What support their university offers them}
+					\smitem{How they think support can be improved}
+				\end{bullets}\\
+			\end{sectionitem}
+			
+			\begin{sectionitem}
+				2013 --- 2015&\textbf{Whitworth Park Sixth Form}\\
+				\emph{Spennymoor,}&A-Level Grades:\\
+				\emph{Co. Durham}&\begin{bullets}
+					\smitem{English Literature - A*}
+					\smitem{History - A}
+					\smitem{Psychology - B}
+					\smitem{Extended Project (AS) - A*}
+				\end{bullets}\\
+			\end{sectionitem}
+			
+			\begin{sectionitem}
+				2008 --- 2013&\textbf{Whitworth Park School}\\
+				\emph{Spennymoor,}&GCSE Grades:\\
+				\emph{Co. Durham}&\begin{bullets}
+					\smitem{1 $\times$ A*}
+					\smitem{8 $\times$ A}
+					\smitem{2 $\times$ B}
+					\smitem{1 $\times$ C}
+				\end{bullets}\\
+			\end{sectionitem}
+			
+			\sectionheader{Experience Regarding Estrangement}
+			
+			\begin{sectionitem}
+				July 2017&\textbf{Stand Alone and NUS LGBT+}\\
+				\emph{Birmingham}&Involved with national Estranged Students' Solidarity Campaign\\
+				&\begin{bullets}
+					\smitem{Wrote a piece for the campaign's information booklet, distributed to Students Unions nationally}
+					\smitem{Attended the launch with Stand Alone at NUS Conference}
+					\smitem{Gave a presentation about my experiences as an estranged student at Durham}
+					\smitem{Guided Students' Union Officers on how to lobby universities to improve estranged students' experiences}
+				\end{bullets}
+			\end{sectionitem}
+		\end{minipage}
 	\end{tabularx}
+
+	\newpage
+	
+	\noindent
+	\begin{tabularx}{\textwidth}{X|X}
+	
+		\begin{minipage}[t]{\linewidth}
+			\sectionheader{Experience Regarding Estrangement (Cont.)}\\
+			\begin{sectionitem}
+				Jul 2017&\textbf{BBC Three}\\
+				--- Oct 2017\newline\emph{Remote}&Worked with BBC Three on an article about family estrangement through a series of interviews with a BBC Producer.\\
+			\end{sectionitem}
+		
+			\sectionheader{Other Experience}
+			
+			\begin{sectionitem}
+				Nov 2017\newline--- Present&\textbf{Mentor}, \emph{DU Education Society}\\
+				\emph{Durham}&\begin{bullets}
+					\smitem{Point of contact for a first-year student studying my course}
+					\smitem{Helping them adapt to university life}
+				\end{bullets}\\
+			\end{sectionitem}
+		
+			\begin{sectionitem}
+				Oct 2017\newline --- Present\newline\emph{Durham}&\textbf{Hobbies and Games Representative}, \emph{Durham Students' Union Societies Committee}\\
+				&\begin{bullets}
+					\smitem{Lead of Collaboration sub-committee, researching ways to encourage inter-society events}
+					\smitem{Key point of contact to a range of societies, working to improve their experiences in the union}
+				\end{bullets}\\
+			\end{sectionitem}
+		
+			\begin{sectionitem}
+				Jul 2017\newline --- Present&\textbf{Open Day Ambassador}, \emph{Durham University}\\
+				\emph{Durham}&\begin{bullets}
+					\smitem{Interacting with prospective students}
+					\smitem{Assisted in delivering the BA Education Studies presentations}
+				\end{bullets}\\
+			\end{sectionitem}
+		
+			\begin{sectionitem}
+				Nov 2016\newline --- Present&\textbf{Course Representative}, \emph{Durham University}\\
+				\emph{Durham}&\begin{bullets}
+					\smitem{Reporting the issues faced by students on my course at the Student Staff Consultative Committee}
+					\smitem{Elected as Student Representative on the BA Education Studies Programme Committee}
+				\end{bullets}\\
+			\end{sectionitem}
+		\end{minipage}&
+		\begin{minipage}[t]{\linewidth}
+			\sectionheader{Other Experience (Cont.)}
+			\begin{sectionitem}
+				Nov 2016\newline --- Present&\textbf{Games Demonstrator}, \emph{Esdevium Games}\\
+				\emph{Nationwide}&\begin{bullets}
+					\smitem{Work at stores/events to demonstrate board games to customers and attendees}
+					\smitem{Involved in the training of new demonstrators}
+				\end{bullets}\\
+			\end{sectionitem}
+		
+			\begin{sectionitem}
+				Mar 2016\newline --- Present&\textbf{President}, \emph{Trevelyan College Games Society}\\
+				\emph{Durham}&\begin{bullets}
+					\smitem{Coordinate with Executive Committee}
+					\smitem{Run frequent events with 30+ students attending}
+				\end{bullets}\\
+			\end{sectionitem}
+		
+			\sectionheader{Conferences and Seminars Attended}
+			
+			\begin{sectionitem}
+				Dec 2017&\textbf{`Who Counts as a Widening Participation Student?'}\\
+				&Research Seminar\\
+				&Durham University\\
+			\end{sectionitem}
+		
+			\begin{sectionitem}
+				Nov 2017\newline--- May 2018&\textbf{`Institute of Advance Study `The Future of the University'}\\
+				&Public Lecture Series\\
+				&Durham University\\
+			\end{sectionitem}
+		
+			\begin{sectionitem}
+				Sep 2017&\textbf{`Student Politics in Contemporary Higher Education --- Theory, Policy and Practice'}\\
+				&Symposium\\
+				&Durham University\\
+			\end{sectionitem}
+		
+			\begin{sectionitem}
+				May 2017&\textbf{`Mind your language: the vocabulary of higher education today'}\\
+				&Durham Castle Lecture\\
+				&Durham University\\
+			\end{sectionitem}
+		
+			\begin{sectionitem}
+				Jul 2016&\textbf{Teach First Impact Conference}\\
+				&Conference\\
+				&Leeds\\
+			\end{sectionitem}
+		\end{minipage}
+		
+	\end{tabularx}
+	
 \end{document}
