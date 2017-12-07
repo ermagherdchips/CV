@@ -7,6 +7,10 @@
 \usepackage{enumitem}%to set gaps in itemize
 \usepackage{fontawesome}
 
+\usepackage{multicol}
+
+\usepackage[sfdefault,light]{roboto}
+
 %\cellwidth in tabularx size
 \makeatletter
 \newcommand\cellwidth{\TX@col@width}
@@ -18,7 +22,7 @@
 %Change gap between columns on 2nd page
 %\setlength{\columnsep}{1.5cm}
 %Add line between columns
-\setlength{\columnseprule}{0.2pt}
+%\setlength{\columnseprule}{0.2pt}
 
 %No page numbering
 \pagenumbering{gobble}
@@ -33,14 +37,19 @@
 	\vspace{6pt}
 	{
 		\noindent
-		%\hspace{5pt}
+		\hspace{3pt}
+		%\fontfamily{lmr}\selectfont
 		\Large\textbf{#1}}}
 
 \begin{document}
 	\noindent
 	\begin{tabularx}{\textwidth}{cR}
 		\begin{tabular}{l}
-			{\HUGE\textbf{Amie Key}} \\
+			{\fontfamily{lmr}\selectfont
+				\textbf{
+				\HUGE Amie Key}
+			}
+		 \\
 		\end{tabular} & 
 	
 		\begin{tabular}{rc}
@@ -95,13 +104,15 @@
 			
 			\begin{sectionitem}
 				2008 --- 2013&\textbf{Whitworth Park School}\\
-				\emph{Spennymoor,}&GCSE Grades:\\
-				\emph{Co. Durham}&\begin{bullets}
-					\smitem{1 $\times$ A*}
-					\smitem{8 $\times$ A}
-					\smitem{2 $\times$ B}
-					\smitem{1 $\times$ C}
-				\end{bullets}\\
+				\emph{Spennymoor}&GCSE Grades:\\
+				\emph{Co. Durham}&\begin{minipage}[t]{\linewidth}\begin{multicols}{4}\begin{description}[nosep]
+						\item 1 $\times$ A*
+						\item 8 $\times$ A
+						\item 2 $\times$ B
+						\item 1 $\times$ C
+					\end{description}
+				\end{multicols}
+			\end{minipage}
 			\end{sectionitem}
 			
 			\sectionheader{Experience Regarding Estrangement}
@@ -121,7 +132,8 @@
 	
 	\begin{table}
 		\noindent
-		\begin{tabularx}{\textwidth}{X|X}
+		
+		\begin{tabularx}{\textwidth}{XcX}
 		
 			\begin{minipage}[t]{\linewidth}
 				%\sectionheader{Experience Regarding Estrangement (Cont.)}\\
@@ -133,7 +145,7 @@
 				\sectionheader{Other Experience}
 				
 				\begin{sectionitem}
-					Nov 2017\newline--- Present&\textbf{Mentor}, \emph{DU Education Society}\\
+					Nov 2017\newline--- Present&\textbf{Mentor}, \emph{Durham University Education Society}\\
 					\emph{Durham}&\begin{bullets}
 						\smitem{Point of contact for a first-year student studying my course}
 						\smitem{Helping them adapt to university life}
@@ -163,7 +175,7 @@
 						\smitem{Elected as Student Representative on the BA Education Studies Programme Committee}
 					\end{bullets}\\
 				\end{sectionitem}
-			\end{minipage}&
+			\end{minipage}&&
 			\begin{minipage}[t]{\linewidth}
 				%\sectionheader{Other Experience (Cont.)}
 				\begin{sectionitem}
@@ -182,7 +194,7 @@
 					\end{bullets}\\
 				\end{sectionitem}
 			
-				\sectionheader{Conferences and Seminars Attended}
+				\sectionheader{Presentations Attended}
 				
 				\begin{sectionitem}
 					Dec 2017&\textbf{`Who Counts as a Widening Participation Student?'}\\
@@ -191,8 +203,9 @@
 				\end{sectionitem}
 			
 				\begin{sectionitem}
-					Nov 2017\newline--- May 2018&\textbf{`Institute of Advance Study `The Future of the University'}\\
-					&Public Lecture Series\\
+					Nov 2017\newline--- May 2018&\textbf{`The Future of the University'}\\
+					&Public Lecture Series,\\
+					&Institute of Advance Study\\
 					&Durham University\\
 				\end{sectionitem}
 			
