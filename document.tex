@@ -5,6 +5,7 @@
 \usepackage[margin=0.65in]{geometry}%Margins
 \usepackage[none]{hyphenat}%Remove hyphenation
 \usepackage{enumitem}%to set gaps in itemize
+\usepackage{fontawesome}
 
 %\cellwidth in tabularx size
 \makeatletter
@@ -37,22 +38,16 @@
 
 \begin{document}
 	\noindent
-	\begin{tabularx}{\textwidth}{cRl}
+	\begin{tabularx}{\textwidth}{cR}
 		\begin{tabular}{l}
 			{\HUGE\textbf{Amie Key}} \\
 		\end{tabular} & 
 	
-		\begin{tabular}{r}
-			6 Meadow Grange, DH4 6DW\\
-			amiekey10@gmail.com\\
-			07736105946\\
-		\end{tabular} & 
-	
-		\begin{tabular}{r}
-		\textbf{Addr.} \\
-		\textbf{Email} \\
-		\textbf{Phone} \\
-		\end{tabular}
+		\begin{tabular}{rc}
+			6 Meadow Grange, DH4 6DW & \faHome\\
+			amiekey10@gmail.com & \faEnvelope\\
+			07736105946 & \faPhone \\
+		\end{tabular} \\
 	\end{tabularx}
 
 	\par\noindent\rule{\textwidth}{0.2pt}
@@ -130,7 +125,7 @@
 	\begin{tabularx}{\textwidth}{X|X}
 	
 		\begin{minipage}[t]{\linewidth}
-			\sectionheader{Experience Regarding Estrangement (Cont.)}\\
+			%\sectionheader{Experience Regarding Estrangement (Cont.)}\\
 			\begin{sectionitem}
 				Jul 2017&\textbf{BBC Three}\\
 				--- Oct 2017\newline\emph{Remote}&Worked with BBC Three on an article about family estrangement through a series of interviews with a BBC Producer.\\
@@ -171,7 +166,7 @@
 			\end{sectionitem}
 		\end{minipage}&
 		\begin{minipage}[t]{\linewidth}
-			\sectionheader{Other Experience (Cont.)}
+			%\sectionheader{Other Experience (Cont.)}
 			\begin{sectionitem}
 				Nov 2016\newline --- Present&\textbf{Games Demonstrator}, \emph{Esdevium Games}\\
 				\emph{Nationwide}&\begin{bullets}
