@@ -21,12 +21,7 @@
 
 \newenvironment{bullets}{\begin{minipage}[t]{\linewidth}\begin{itemize}[leftmargin=2em,label=-,nosep]}{\end{itemize}\end{minipage}\vspace{5pt}}
 
-\newenvironment{sectionitem}{
-	\vspace{6pt} {\noindent \begin{tabularx}{\cellwidth}{p{75pt}X} }
-}
-{
-\end{tabularx}
-}
+\newenvironment{sectionitem}{\vspace{6pt}\noindent\tabularx{\cellwidth}{p{75pt}X}}{\endtabularx}
 
 \begin{document}
 	\noindent
@@ -34,22 +29,22 @@
 		\begin{tabular}{l}
 			{\HUGE\textbf{Amie Key}} \\
 		\end{tabular} & 
-		
+	
 		\begin{tabular}{r}
 			6 Meadow Grange, DH4 6DW\\
 			amiekey10@gmail.com\\
 			07736105946\\
 		\end{tabular} & 
-		
+	
 		\begin{tabular}{r}
-			\textbf{Addr.} \\
-			\textbf{Email} \\
-			\textbf{Phone} \\
+		\textbf{Addr.} \\
+		\textbf{Email} \\
+		\textbf{Phone} \\
 		\end{tabular}
 	\end{tabularx}
-	
+
 	\par\noindent\rule{\textwidth}{0.4pt}
-	
+
 	\noindent
 	\begin{tabularx}{\textwidth}{p{150pt}|X}
 		\vspace{1pt}
@@ -78,28 +73,28 @@
 				\smitem{What support their university offers them}
 				\smitem{How they think support can be improved}
 			\end{bullets}\\
-		\end{sectionItem}
-		
+		\end{sectionitem}
+	
 		\begin{sectionitem}
-			2015 --- 2018&\textbf{Durham University} (St. Aidan's College)\\
-			&BA Education Studies (English Studies)\\
-			&\begin{bullets}
-				\smitem{Year 2: 70\%, 75\% in Education}
-				\smitem{Year 1: 68\%, 71\% in Education}
-			\end{bullets}\\
-			&\textbf{Including Modules}:\\
-			&\begin{bullets}
-				\smitem{Higher Education: Issues of Exclusion and Inclusion - 74\%}
-				\smitem{Constructing Childhood and Youth - 86\%}
-				\smitem{Educational Research Methods - 68\%}
-			\end{bullets}\\
-			&\textbf{Dissertation}: Exploring the experiences of estranged students in UK higher education. (Supervised by Dr. Rille Raaper)\\
-			&Interviews with estranged students at UK universities exploring:\\
-			&\begin{bullets}
-				\smitem{Issues that they face at university}
-				\smitem{What support their university offers them}
-				\smitem{How they think support can be improved}
-			\end{bullets}\\
+				2015 --- 2018&\textbf{Durham University} (St. Aidan's College)\\
+				&BA Education Studies (English Studies)\\
+				&\begin{bullets}
+					\smitem{Year 2: 70\%, 75\% in Education}
+					\smitem{Year 1: 68\%, 71\% in Education}
+				\end{bullets}\\
+				&\textbf{Including Modules}:\\
+				&\begin{bullets}
+					\smitem{Higher Education: Issues of Exclusion and Inclusion - 74\%}
+					\smitem{Constructing Childhood and Youth - 86\%}
+					\smitem{Educational Research Methods - 68\%}
+				\end{bullets}\\
+				&\textbf{Dissertation}: Exploring the experiences of estranged students in UK higher education. (Supervised by Dr. Rille Raaper)\\
+				&Interviews with estranged students at UK universities exploring:\\
+				&\begin{bullets}
+					\smitem{Issues that they face at university}
+					\smitem{What support their university offers them}
+					\smitem{How they think support can be improved}
+				\end{bullets}\\
 		\end{sectionitem}
 	\end{tabularx}
 \end{document}
